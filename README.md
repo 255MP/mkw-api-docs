@@ -12,7 +12,7 @@ Lounge API endpoints are open to the public, but certain request will require yo
 * [Class](lounge/ladderclass.md)
 * [Event](lounge/ladderevent.md)
 * Event Rating Calculator (MMR/LR)
-* Placement
+* [Placement](lounge/ladderplacement.md)
 * Player (Ladder / Self / Global)
 * Award/Penalty
 * Player's Event

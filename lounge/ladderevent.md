@@ -116,7 +116,7 @@ Intent: `ladderevent:retrieve`
 | --------- | ----- |
 | all       | 1     |
 | ladder_id | 1     |
-| limit     | 5    |
+| limit     | 5     |
 
 ```json
 {
@@ -156,17 +156,17 @@ Intent: `ladderevent:delete`
 
 ### Request
 
-| parameters    | required | description        |
-| ------------- | -------- | ------------------ |
-| code          | Y        | API key            |
-| event_id     | Y        | Event ID          |
+| parameter | required | description |
+| --------- | -------- | ----------- |
+| code      | Y        | API key     |
+| event_id  | Y        | Event ID    |
 
 ### Response
 
-| parameter     | value     |
-| ------------- | --------- |
-| code          | `API key` |
-| event_id     | 500         |
+| parameter | value     |
+| --------- | --------- |
+| code      | `API key` |
+| event_id  | 500       |
 
 ```json
 {

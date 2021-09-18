@@ -1,4 +1,4 @@
-# Ladder Boundary (Division/Ranking)
+# Boundary (Division/Ranking)
 Endpoint: `/api/ladderboundary.php`
 
 ## GET
@@ -50,7 +50,7 @@ Intent: `ladderboundary:update`
 
 ### Request
 
-| parameters    | required | description         |
+| parameter     | required | description         |
 | ------------- | -------- | ------------------- |
 | code          | Y        | API key             |
 | ladder_id     | Y        | Ladder ID           |
@@ -110,7 +110,7 @@ Intent: `ladderboundary:delete`
 
 ### Request
 
-| parameters    | required | description        |
+| parameter     | required | description        |
 | ------------- | -------- | ------------------ |
 | code          | Y        | API key            |
 | ladder_id     | Y        | Ladder ID          |

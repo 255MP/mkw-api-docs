@@ -46,7 +46,7 @@ Intent: `ladderclass:update`
 
 ### Request
 
-| parameters  | required | description |
+| parameter   | required | description |
 | ----------- | -------- | ----------- |
 | code        | Y        | API key     |
 | ladder_id   | Y        | Ladder ID   |
@@ -96,7 +96,7 @@ Intent: `ladderclass:delete`
 
 ### Request
 
-| parameters | required | description |
+| parameter  | required | description |
 | ---------- | -------- | ----------- |
 | code       | Y        | API key     |
 | ladder_id  | Y        | Ladder ID   |

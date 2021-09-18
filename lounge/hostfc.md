@@ -45,7 +45,7 @@ Intent: `hostfc:update`
 
 ### Request
 
-| parameters       | required | description      |
+| parameter        | required | description      |
 | ---------------- | -------- | ---------------- |
 | code             | Y        | API key          |
 | discord_guild_id | Y        | Discord Guild ID |
@@ -73,7 +73,7 @@ Intent: `hostfc:delete`
 
 ### Request
 
-| parameters       | required | description      |
+| parameter        | required | description      |
 | ---------------- | -------- | ---------------- |
 | code             | Y        | API key          |
 | discord_guild_id | Y        | Discord Guild ID |
