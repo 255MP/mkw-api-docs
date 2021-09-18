@@ -14,7 +14,7 @@ Lounge API endpoints are open to the public, but certain request will require yo
 * Event Rating Calculator (MMR/LR)
 * [Placement](lounge/ladderplacement.md)
 * Player (Ladder / Self / Global)
-* Award/Penalty
+* [Award/Penalty](lounge/ladderplayerawardpenalty.md)
 * Player's Event
 * Strikes
 * Tier
