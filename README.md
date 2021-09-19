@@ -28,6 +28,6 @@ Lounge API endpoints are open to the public, but certain request will require yo
 Wiimmfi is protected by CloudFlare. You will need to write a workaround to bypass the CloudFlare protection.
 
 ### API Endpoints
-* Online users
-* Room and races
+* [Game Statistics/Online Status](wiimmfi/onlinestatus.md)
+* Room/Races
 * Mii
