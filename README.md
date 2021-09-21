@@ -16,7 +16,7 @@ Lounge API endpoints are open to the public, but certain request will require yo
 * Player (Ladder / Self / Global)
 * [Award/Penalty](lounge/ladderplayerawardpenalty.md)
 * Player's Event
-* Strikes
+* [Strikes](lounge/ladderplayerstrikes.md)
 * Tier
 * Track Statistics
 * Server Stats
