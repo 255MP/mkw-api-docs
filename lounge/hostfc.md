@@ -6,19 +6,23 @@ Returns a list of friend codes for the specified users in a specified guild.
 
 Intent: `hostfc:retrieve`
 
-### Request
+### Usage
 
 | parameter        | required | description                       |
 | ---------------- | -------- | --------------------------------- |
 | discord_guild_id | Y        | Discord Guild ID                  |
 | discord_user_id  | Y        | Discord User ID (comma separated) |
 
-### Response
+### Example
+
+#### Request
 
 | parameter        | value                                  |
 | ---------------- | -------------------------------------- |
 | discord_guild_id | 387347467332485122                     |
 | discord_user_id  | 373695448399216642, 207213178298302465 |
+
+#### Response
 
 ```json
 {
@@ -43,7 +47,7 @@ Add/update the friend code for a specified user in a specified guild.
 
 Intent: `hostfc:update`
 
-### Request
+### Usage
 
 | parameter        | required | description      |
 | ---------------- | -------- | ---------------- |
@@ -51,13 +55,17 @@ Intent: `hostfc:update`
 | discord_guild_id | Y        | Discord Guild ID |
 | discord_user_id  | Y        | Discord User ID  |
 
-### Response
+### Example
+
+#### Request
 
 | parameter        | value              |
 | ---------------- | ------------------ |
 | code             | `API key`          |
 | discord_guild_id | 387347467332485122 |
 | discord_user_id  | 373695448399216642 |
+
+#### Response 
 
 ```json
 {
@@ -71,7 +79,7 @@ Remove the friend code for a specified user in a specified guild.
 
 Intent: `hostfc:delete`
 
-### Request
+### Usage
 
 | parameter        | required | description      |
 | ---------------- | -------- | ---------------- |
@@ -79,13 +87,17 @@ Intent: `hostfc:delete`
 | discord_guild_id | Y        | Discord Guild ID |
 | discord_user_id  | Y        | Discord User ID  |
 
-### Response
+### Example
+
+#### Request
 
 | parameter        | value              |
 | ---------------- | ------------------ |
 | code             | `API key`          |
 | discord_guild_id | 387347467332485122 |
 | discord_user_id  | 373695448399216642 |
+
+#### Response
 
 ```json
 {
