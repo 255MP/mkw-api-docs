@@ -58,7 +58,7 @@ Intent: `ladderplacement:update`
 
 | parameter      | value     |
 | -------------- | --------- |
-| code           | `API key` |
+| code           | API key |
 | ladder_id      | 1         |
 | placement_name | Wood      |
 | base_mmr       | 250       |

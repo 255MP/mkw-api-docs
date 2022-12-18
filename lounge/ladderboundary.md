@@ -8,15 +8,18 @@ Intent: `ladderboundary:retrieve`
 
 ### Request
 
-| parameter | required | description |
-| --------- | -------- | ----------- |
-| ladder_id | Y        | Ladder ID   |
+| parameter   | required | description                                       |
+| ----------- | -------- | ------------------------------------------------- |
+| ladder_type | Y        | `rt` or `ct`                                      |
+| ladder_id   | N        | Ladder ID (required if `ladder_type` is not used) |
+
+#### Example
+
+| parameter   | value |
+| ----------- | ----- |
+| ladder_type | rt    |
 
 ### Response
-
-| parameter | value |
-| --------- | ----- |
-| ladder_id | 1     |
 
 ```json
 {
@@ -110,19 +113,20 @@ Intent: `ladderboundary:delete`
 
 ### Request
 
-| parameter     | required | description        |
-| ------------- | -------- | ------------------ |
-| code          | Y        | API key            |
-| ladder_id     | Y        | Ladder ID          |
-| boundary_name | Y        | Division/rank name |
+| parameter     | required | description                            |
+| ------------- | -------- | -------------------------------------- |
+| code          | Y        | API key                                |
+| ladder_type   | Y        | `rt` or `ct`                           |
+| ladder_id     | N        | Ladder ID (alternative to ladder_type) |
+| boundary_name | Y        | Division/rank name                     |
 
 ### Response
 
-| parameter     | value     |
-| ------------- | --------- |
-| code          | `API key` |
-| ladder_id     | 1         |
-| boundary_name | Wood      |
+| parameter     | value   |
+| ------------- | ------- |
+| code          | API key |
+| ladder_id     | 1       |
+| boundary_name | Wood    |
 
 ```json
 {
