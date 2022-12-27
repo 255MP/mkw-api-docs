@@ -10,22 +10,23 @@ Intent: `ladderplayer:retrieve`
 
 | parameter   | required | description                                            |
 | ----------- | -------- | ------------------------------------------------------ |
-| ladder_id   | Y        | Ladder ID                                              |
+| ladder_type | Y        | `rt` or `ct`                                           |
+| ladder_id   | N        | Ladder ID (required if `ladder_type` is not used)      |
 | player_id   | Y        | Player ID                                              |
-| player_name | Y        | Player name (required if `player_id` is not specified) |
+| player_name | N        | Player name (required if `player_id` is not specified) |
 
 ### Response
 
-| parameter | value |
-| --------- | ----- |
-| ladder_id | 1     |
-| player_id | 7     |
+| parameter   | value |
+| ----------- | ----- |
+| ladder_type | rt    |
+| player_id   | 7     |
 
 or
 
 | parameter   | value |
 | ----------- | ----- |
-| ladder_id   | 1     |
+| ladder_type | rt    |
 | player_name | 255MP |
 
 ```json
@@ -93,20 +94,21 @@ Intent: `ladderplayer:update`
 
 ### Request
 
-| parameter      | required | description    |
-| -------------- | -------- | -------------- |
-| code           | Y        | API key        |
-| ladder_id      | Y        | Ladder ID      |
-| placement_name | Y        | Placement name |
-| base_mmr       | Y        | Base MMR       |
-| base_lr        | Y        | Base LR        |
+| parameter      | required | description                                       |
+| -------------- | -------- | ------------------------------------------------- |
+| code           | Y        | API key                                           |
+| ladder_type    | Y        | `rt` or `ct`                                      |
+| ladder_id      | N        | Ladder ID (required if `ladder_type` is not used) |
+| placement_name | Y        | Placement name                                    |
+| base_mmr       | Y        | Base MMR                                          |
+| base_lr        | Y        | Base LR                                           |
 
 ### Response
 
 | parameter      | value     |
 | -------------- | --------- |
 | code           | `API key` |
-| ladder_id      | 1         |
+| ladder_type    | rt        |
 | placement_name | Wood      |
 | base_mmr       | 250       |
 | base_lr        | 251       |
@@ -176,18 +178,22 @@ Intent: `ladderplayer:delete`
 
 ### Request
 
-| parameter      | required | description    |
-| -------------- | -------- | -------------- |
-| code           | Y        | API key        |
-| ladder_id      | Y        | Ladder ID      |
+| parameter   | required | description                                       |
+| ----------- | -------- | ------------------------------------------------- |
+| code        | Y        | API key                                           |
+| ladder_type | Y        | `rt` or `ct`                                      |
+| ladder_id   | N        | Ladder ID (required if `ladder_type` is not used) |
 
 ### Response
 
-| parameter      | value     |
-| -------------- | --------- |
-| code           | `API key` |
-| ladder_id      | 1         |
+| parameter   | value     |
+| ----------- | --------- |
+| code        | `API key` |
+| ladder_type | rt        |
 
 ```json
-...
+ {
+  "status": "success",
+  "results": []
+}
 ```

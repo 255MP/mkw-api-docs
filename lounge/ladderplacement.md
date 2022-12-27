@@ -8,15 +8,16 @@ Intent: `ladderplacement:retrieve`
 
 ### Request
 
-| parameter | required | description |
-| --------- | -------- | ----------- |
-| ladder_id | Y        | Ladder ID   |
+| parameter   | required | description                                       |
+| ----------- | -------- | ------------------------------------------------- |
+| ladder_type | Y        | `rt` or `ct`                                      |
+| ladder_id   | N        | Ladder ID (required if `ladder_type` is not used) |
 
 ### Response
 
-| parameter | value |
-| --------- | ----- |
-| ladder_id | 1     |
+| parameter   | value |
+| ----------- | ----- |
+| ladder_type | rt    |
 
 ```json
  {
@@ -46,20 +47,21 @@ Intent: `ladderplacement:update`
 
 ### Request
 
-| parameter      | required | description    |
-| -------------- | -------- | -------------- |
-| code           | Y        | API key        |
-| ladder_id      | Y        | Ladder ID      |
-| placement_name | Y        | Placement name |
-| base_mmr       | Y        | Base MMR       |
-| base_lr        | Y        | Base LR        |
+| parameter      | required | description                                       |
+| -------------- | -------- | ------------------------------------------------- |
+| code           | Y        | API key                                           |
+| ladder_type    | Y        | `rt` or `ct`                                      |
+| ladder_id      | N        | Ladder ID (required if `ladder_type` is not used) |
+| placement_name | Y        | Placement name                                    |
+| base_mmr       | Y        | Base MMR                                          |
+| base_lr        | Y        | Base LR                                           |
 
 ### Response
 
 | parameter      | value     |
 | -------------- | --------- |
-| code           | API key |
-| ladder_id      | 1         |
+| code           | `API key` |
+| ladder_type    | rt        |
 | placement_name | Wood      |
 | base_mmr       | 250       |
 | base_lr        | 251       |
@@ -98,18 +100,19 @@ Intent: `ladderplacement:delete`
 
 ### Request
 
-| parameter      | required | description    |
-| -------------- | -------- | -------------- |
-| code           | Y        | API key        |
-| ladder_id      | Y        | Ladder ID      |
-| placement_name | Y        | Placement name |
+| parameter      | required | description                                       |
+| -------------- | -------- | ------------------------------------------------- |
+| code           | Y        | API key                                           |
+| ladder_type    | Y        | `rt` or `ct`                                      |
+| ladder_id      | N        | Ladder ID (required if `ladder_type` is not used) |
+| placement_name | Y        | Placement name                                    |
 
 ### Response
 
 | parameter      | value     |
 | -------------- | --------- |
 | code           | `API key` |
-| ladder_id      | 1         |
+| ladder_type    | rt        |
 | placement_name | Wood      |
 
 ```json

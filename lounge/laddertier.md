@@ -1,10 +1,10 @@
 # Class
-Endpoint: `/api/ladderclass.php`
+Endpoint: `/api/laddertier.php`
 
 ## GET
-Returns a list of classes for a specified ladder.
+Returns a list of tiers for a specified ladder.
 
-Intent: `ladderclass:retrieve`
+Intent: `laddertier:retrieve`
 
 ### Request
 
@@ -24,26 +24,22 @@ Intent: `ladderclass:retrieve`
   "status": "success",
   "results": [
     {
-      "ladder_order": 1,
-      "ladder_class_name": "Class F",
-      "minimum_mmr": null,
-      "maximum_mmr": 999
+      "ladder_id": 5,
+      "tier": "Master"
     },
     ...
     {
-      "ladder_order": 8,
-      "ladder_class_name": "Class X",
-      "minimum_mmr": 9000,
-      "maximum_mmr": null
+      "ladder_id": 5,
+      "tier": "Tier 8"
     }
   ]
 }
 ```
 
 ## POST / PUT
-Adds a new class if the `class_name` does not exists, otherwise updates the existing entry if the `class_name` exists for the specified ladder. `class_name` matching is case-insensitive and ignores whitespaces.
+Adds a new tier if the `tier_name` does not exists, otherwise updates the existing entry if the `tier_name` exists for the specified ladder. `tier_name` matching is case-insensitive and ignores whitespaces.
 
-Intent: `ladderclass:update`
+Intent: `laddertier:update`
 
 ### Request
 
@@ -52,8 +48,7 @@ Intent: `ladderclass:update`
 | code        | Y        | API key                                           |
 | ladder_type | Y        | `rt` or `ct`                                      |
 | ladder_id   | N        | Ladder ID (required if `ladder_type` is not used) |
-| class_name  | Y        | Class name                                        |
-| minimum_mmr | N        | Minimum MMR                                       |
+| tier_name   | Y        | Tier name                                         |
 
 ### Response
 
@@ -61,40 +56,33 @@ Intent: `ladderclass:update`
 | ----------- | --------- |
 | code        | `API key` |
 | ladder_type | rt        |
-| class_name  | Class Y   |
-| minimum_mmr | 250       |
+| tier_name   | Tier 1    |
 
 ```json
 {
   "status": "success",
   "results": [
     {
-      "ladder_order": 1,
-      "ladder_class_name": "Class F",
-      "minimum_mmr": null,
-      "maximum_mmr": 249
-    },
-    {
-      "ladder_order": 2,
-      "ladder_class_name": "Class Y",
-      "minimum_mmr": 250,
-      "maximum_mmr": 999
+      "ladder_id": 5,
+      "tier": "Master"
     },
     ...
     {
-      "ladder_order": 9,
-      "ladder_class_name": "Class X",
-      "minimum_mmr": 9000,
-      "maximum_mmr": null
+      "ladder_id": 5,
+      "tier": "Tier 1"
+    },
+    {
+      "ladder_id": 5,
+      "tier": "Tier 8"
     }
   ]
 }
 ```
 
 ## DELETE
-Remove a specified division/ranking for a specified ladder.
+Remove the specified tier for a specified ladder.
 
-Intent: `ladderclass:delete`
+Intent: `laddertier:delete`
 
 ### Request
 
@@ -103,7 +91,7 @@ Intent: `ladderclass:delete`
 | code        | Y        | API key                                           |
 | ladder_type | Y        | `rt` or `ct`                                      |
 | ladder_id   | N        | Ladder ID (required if `ladder_type` is not used) |
-| class_name  | Y        | Class name                                        |
+| tier_name   | Y        | Tier name                                         |
 
 ### Response
 
@@ -111,24 +99,20 @@ Intent: `ladderclass:delete`
 | ----------- | --------- |
 | code        | `API key` |
 | ladder_type | rt        |
-| class_name  | Class Y   |
+| tier_name   | Tier 1    |
 
 ```json
 {
   "status": "success",
   "results": [
     {
-      "ladder_order": 1,
-      "ladder_class_name": "Class F",
-      "minimum_mmr": null,
-      "maximum_mmr": 999
+      "ladder_id": 5,
+      "tier": "Master"
     },
     ...
     {
-      "ladder_order": 8,
-      "ladder_class_name": "Class X",
-      "minimum_mmr": 9000,
-      "maximum_mmr": null
+      "ladder_id": 5,
+      "tier": "Tier 8"
     }
   ]
 }
